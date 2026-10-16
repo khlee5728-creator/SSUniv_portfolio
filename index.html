@@ -1,0 +1,133 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이경희 · 디지털 스토리텔링 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f1;--ink:#1f2a2e;--muted:#5d686c;--line:#e4ddd0;--teal:#0f6b66;--teal-soft:#e2efec;--coral:#e0664f;--card:#ffffff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','Noto Sans CJK KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:16px;line-height:1.7;word-break:keep-all}
+a{color:var(--teal)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+header.hero{padding-block:72px 48px;border-bottom:1px solid var(--line)}
+.kicker{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.15;margin:0 0 16px;font-weight:800;letter-spacing:-.02em}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:760px;margin:0 0 28px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:var(--ink)}
+.meta span{padding-left:14px;position:relative}.meta span:before{content:'';position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+nav.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+nav.toc a{padding:8px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:14px;background:var(--card)}
+nav.toc a:hover{border-color:var(--teal);color:var(--teal)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.stat b{display:block;font-size:30px;color:var(--teal);line-height:1.2}
+.stat small{color:var(--muted);font-size:14px;display:block}
+.chip{display:inline-block;margin-top:8px;background:var(--coral);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:3px 10px}
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+.sec-no{color:var(--coral);font-weight:800;font-size:15px;letter-spacing:.08em}
+h2{font-size:clamp(26px,3.2vw,34px);margin:6px 0 12px;line-height:1.3;letter-spacing:-.01em}
+.sec-lead{color:var(--muted);max-width:820px;margin:0 0 32px}
+.cast{display:inline-block;background:var(--teal-soft);color:var(--teal);font-weight:700;border-radius:8px;padding:2px 10px;font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card video,.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#dfe7e5;border-bottom:1px solid var(--line)}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{font-size:13px;font-weight:700;color:var(--coral)}
+.card h3{margin:0;font-size:18px;line-height:1.4}
+.card h3 small{font-weight:500;color:var(--muted);font-size:14px;margin-left:6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .go{margin-top:auto;padding-top:8px;font-size:14px;font-weight:700;text-decoration:none}
+.feature{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;margin-bottom:28px}
+.feature img{width:100%;border-radius:16px;border:1px solid var(--line);display:block}
+.feature h3{font-size:22px;margin:0 0 8px}
+.feature p{margin:0;color:var(--muted)}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.thumbs figure{margin:0}.thumbs img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+.thumbs figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.links{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.links a b{color:var(--teal)}.links a span{display:block;color:var(--muted);font-size:14px}
+.links a:hover{border-color:var(--teal)}
+.thumbs.four{grid-template-columns:repeat(4,1fr)}
+.thumbs.slides{grid-template-columns:repeat(2,1fr);gap:24px}.thumbs.slides img{aspect-ratio:4/3;object-fit:contain;background:#efe9dd}
+.thumbs a{display:block}.thumbs figcaption b{color:var(--ink);font-weight:700}
+.feature .tag{display:block;margin-bottom:4px}
+.company-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border-top:2px solid var(--teal);padding-top:14px;margin-bottom:6px}.company-head h3{margin:0;font-size:22px}.company-head .when{color:var(--muted);font-size:15px}
+.sub{font-weight:700;color:var(--teal);margin:22px 0 4px}
+.copy{font-size:13px;color:var(--muted);margin-top:14px}
+.company{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+.company h3{margin:0;font-size:20px}.company .when{color:var(--muted);font-size:14px}
+.company .role{margin:10px 0;font-weight:700;color:var(--teal)}
+.company ul{margin:0;padding-left:20px;color:var(--ink)}
+.note{margin-top:20px;font-size:14px;color:var(--muted);background:var(--teal-soft);border-radius:10px;padding:12px 16px}
+.research{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.research img{width:100%;border-radius:12px;border:1px solid var(--line)}
+.pg .research img{max-height:150mm;object-fit:contain}
+.research ol{padding-left:20px;margin:0}.research li{margin-bottom:10px}
+footer{padding-block:40px;color:var(--muted);font-size:14px}
+@media (max-width:900px){.grid3,.thumbs,.thumbs.four{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.feature,.research{grid-template-columns:1fr}}
+.x{}@media (max-width:560px){.grid3,.grid2,.thumbs,.thumbs.four,.thumbs.slides,.links,.stats{grid-template-columns:1fr}}
+</style></head><body><header class="hero"><div class="wrap">
+<p class="kicker">Digital Storytelling Portfolio</p>
+<h1>이야기로 가르치고,<br>AI로 만듭니다</h1>
+<p class="lead">영어 그림책과 애니메이션을 기획하던 15년의 경험을, 이제 대학 강의실에서 AI와 함께 이어 가고 있습니다. 이경희의 디지털 스토리텔링 작업을 소개합니다.</p>
+<div class="meta"><span>이경희 · 영어교육학 박사 (고려대, 음성음운론)</span><span>경기대학교 초빙교수</span><span>대학 강의 8년 (사이버대 3년 포함)</span><span>영어교육 콘텐츠 기획·개발 15년 이상</span></div>
+<nav class="toc"><a href="#animation">강의용 애니메이션</a><a href="#students">학생 AI 프로젝트</a><a href="#lessons">AI 강의 자료</a><a href="#career">콘텐츠 기획 경력</a><a href="#research">연구</a></nav>
+<div class="stats">
+<div class="stat"><b>8년</b><small>대학 강의 경력</small><span class="chip">사이버대 온라인 강의 3년 포함</span></div>
+<div class="stat"><b>12편</b><small>직접 기획·제작한 강의용 에피소드 애니메이션</small></div>
+<div class="stat"><b>6개</b><small>AI로 제작해 공개 중인 강의 사이트</small></div>
+<div class="stat"><b>15년+</b><small>스토리 기반 영어 교재·디지털 콘텐츠 기획</small></div>
+</div></div></header><section id="animation"><div class="wrap">
+<span class="sec-no">01</span><h2>강의 속 디지털 스토리텔링: 영어학 에피소드 애니메이션 12편</h2>
+<p class="sec-lead">경기대학교 「영어학 특강」에서 추상적인 영어학 개념을 짧은 에피소드로 풀어 강의 슬라이드에 넣었습니다. 매 회 같은 인물이 등장하도록 캐릭터를 설정하고, 개념 하나를 한 장면의 이야기로 압축했습니다. <span class="cast">등장인물: 대학생 4명 + 강아지 1마리</span></p>
+<div class="grid3"><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w02_toon_arbitrariness.mp4#t=1"></video><div class="body">
+<span class="tag">2주차 · 언어 지식과 문법</span><h3>자의성<small>Arbitrariness</small></h3><p>같은 강아지를 네 언어로 부르는 장면으로, 소리와 의미의 관계가 자의적임을 보여 줍니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week02.html#/7" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 8번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w03_toon_sitstay.mp4#t=1"></video><div class="body">
+<span class="tag">3주차 · 동물의 의사소통</span><h3>변위성<small>Displacement</small></h3><p>강아지는 &quot;Sit, Stay&quot;는 알아듣지만 &quot;tomorrow&quot;는 모릅니다. 동물 신호에는 변위성이 없다는 개념입니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week03.html#/5" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 6번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w04_toon_unfollow.mp4#t=1"></video><div class="body">
+<span class="tag">4주차 · 형태소와 단어 형성</span><h3>파생 접사<small>Derivation</small></h3><p>un-과 re-가 follow에 붙어 뜻이 바뀌는 상황을 유머로 풀었습니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week04.html#/22" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 23번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w05_toon_plurals.mp4#t=1"></video><div class="body">
+<span class="tag">5주차 · 형태소 분석</span><h3>복합어의 복수형<small>Headless Compounds</small></h3><p>policeman은 policemen인데 walkman은 왜 walkmans일까요?</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week05.html#/13" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 14번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w06_toon_ambiguity.mp4#t=1"></video><div class="body">
+<span class="tag">6주차 · 구구조와 수형도</span><h3>구조적 중의성<small>Structural Ambiguity</small></h3><p>&quot;I saw a dog with binoculars&quot;의 두 가지 해석을 장면으로 보여 줍니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week06.html#/8" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 9번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w07_toon_questions.mp4#t=1"></video><div class="body">
+<span class="tag">7주차 · 문법적 의존관계</span><h3>조동사 도치<small>Aux Inversion</small></h3><p>&quot;You can pet the dog.&quot;가 &quot;Can you pet the dog?&quot;이 되는 과정입니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week07.html#/15" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 16번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w09_toon_thetaroles.mp4#t=1"></video><div class="body">
+<span class="tag">9주차 · 의미론</span><h3>의미역<small>Thematic Roles</small></h3><p>간식을 먹는 강아지로 행위자·대상·출처를 소개합니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week09.html#/26" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 27번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w10_toon_speechacts.mp4#t=1"></video><div class="body">
+<span class="tag">10주차 · 화용론</span><h3>간접 화행<small>Indirect Speech Acts</small></h3><p>&quot;Can you pass the salt?&quot;에 &quot;Yes, I can!&quot;이라고만 답하면?</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week10.html#/13" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 14번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w11_toon_nasal.mp4#t=1"></video><div class="body">
+<span class="tag">11주차 · 음성학(자음)</span><h3>비음과 구강음<small>Nasal vs. Oral</small></h3><p>코를 막으면 m·n이 b·d처럼 들리는 이유를 보여 줍니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week11.html#/15" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 16번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w12_toon_prosody.mp4#t=1"></video><div class="body">
+<span class="tag">12주차 · 음성학(모음과 운율)</span><h3>억양과 태도<small>Intonation</small></h3><p>&quot;Really&quot;를 무덤덤하게, 놀라서, 의심하며 말하는 세 장면입니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week12.html#/15" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 16번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w13_toon_minimalpairs.mp4#t=1"></video><div class="body">
+<span class="tag">13주차 · 음운론(음소)</span><h3>최소대립쌍<small>Minimal Pairs</small></h3><p>[i]와 [ɪ] 하나로 뜻이 달라지는 단어 쌍입니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week13.html#/12" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 13번 슬라이드 →</a></div></article><article class="card"><video controls preload="metadata" playsinline src="https://khlee5728-creator.github.io/language/slides/assets/media/w14_toon_phonotactics.mp4#t=1"></video><div class="body">
+<span class="tag">14주차 · 음운론(음운규칙)</span><h3>음소배열 제약<small>Phonotactics</small></h3><p>blick은 영어 단어가 될 수 있지만 *bnick은 안 되는 이유입니다.</p>
+<a class="go" href="https://khlee5728-creator.github.io/language/slides/week14.html#/21" target="_blank" rel="noopener">강의 슬라이드에서 보기 · 22번 슬라이드 →</a></div></article></div></div></section><section id="students"><div class="wrap">
+<span class="sec-no">02</span><h2>학생 AI 프로젝트: 학생이 만든 이야기와 게임</h2>
+<p class="sec-lead">학생들은 수업에서 배운 영어 표현과 영어학 지식을 바탕으로, AI 도구를 활용해 캐릭터와 사건이 있는 이야기·게임을 직접 만들었습니다. 「디지털 스토리텔링」 수업에서 학습자가 완성하게 될 결과물의 모습이기도 합니다.</p>
+<div class="feature"><img src="assets/grammar_story_monkey.jpg" alt="장면으로 배우는 문장" loading="lazy"><div><span class="tag">학생 작품 · 영문법</span><h3>장면으로 배우는 문장</h3><p>학생이 AI로 원숭이 캐릭터와 방 장면을 만들고, 그 위에 목표 문장(&quot;I&#x27;ve got a banana. I like it!&quot;)을 넣어 상황 속에서 문법을 익히도록 구성했습니다.</p></div></div><div class="feature"><img src="assets/grammar_story_space.jpg" alt="우주선 사건과 미래 표현" loading="lazy"><div><span class="tag">학생 작품 · 영문법</span><h3>우주선 사건과 미래 표현</h3><p>&quot;엔진 고장&quot;이라는 사건을 설정하고, 플레이어가 will과 be going to 중 하나를 골라 이야기를 이어 가도록 만들었습니다.</p></div></div><div class="feature"><img src="assets/grammar_story_3d.jpg" alt="3D 내러티브 게임" loading="lazy"><div><span class="tag">학생 작품 · 영문법</span><h3>3D 내러티브 게임</h3><p>어두운 신전 장면에서 영어 선택지를 고르며 이야기를 진행하는 몰입형 게임입니다.</p></div></div><div class="thumbs"><figure><a href="assets/grammar_game_soccer.jpg" target="_blank"><img src="assets/grammar_game_soccer.jpg" alt="시제 선택 페널티킥 게임" loading="lazy"></a><figcaption><b>시제 선택 페널티킥 게임</b> · 영문법</figcaption></figure><figure><a href="assets/phonology_omok.jpg" target="_blank"><img src="assets/phonology_omok.jpg" alt="발음 기호 속성 오목" loading="lazy"></a><figcaption><b>발음 기호 속성 오목</b> · 음운론</figcaption></figure><figure><a href="assets/phonology_game.jpg" target="_blank"><img src="assets/phonology_game.jpg" alt="음절 나누기 축구 게임" loading="lazy"></a><figcaption><b>음절 나누기 축구 게임</b> · 음운론</figcaption></figure><figure><a href="assets/college_student_portfolio.jpg" target="_blank"><img src="assets/college_student_portfolio.jpg" alt="학생 포트폴리오 페이지" loading="lazy"></a><figcaption><b>학생 포트폴리오 페이지</b> · 대학영어</figcaption></figure><figure><a href="assets/college_student_1.jpg" target="_blank"><img src="assets/college_student_1.jpg" alt="MAKEOVER" loading="lazy"></a><figcaption><b>MAKEOVER</b> · 대학영어</figcaption></figure><figure><a href="assets/college_student_2.jpg" target="_blank"><img src="assets/college_student_2.jpg" alt="World Festival Explorer" loading="lazy"></a><figcaption><b>World Festival Explorer</b> · 대학영어</figcaption></figure></div></div></section><section id="lessons"><div class="wrap">
+<span class="sec-no">03</span><h2>AI로 제작해 공개한 강의 자료</h2>
+<p class="sec-lead">담당 과목의 강의 자료를 AI 도구로 직접 제작해 웹으로 공개하고, 학생들이 언제든 다시 볼 수 있도록 운영하고 있습니다.</p>
+<div class="thumbs four"><figure><img src="assets/phonology_slide.jpg" alt="음운론 강의 슬라이드: 유성음과 무성음" loading="lazy"><figcaption>음운론 강의 슬라이드: 유성음과 무성음</figcaption></figure><figure><img src="assets/current_affairs.jpg" alt="시사영어: 문장 성분 색 구분 표현 학습" loading="lazy"><figcaption>시사영어: 문장 성분 색 구분 표현 학습</figcaption></figure><figure><img src="assets/college_reading.jpg" alt="대학영어: 영상과 연결한 주제별 읽기" loading="lazy"><figcaption>대학영어: 영상과 연결한 주제별 읽기</figcaption></figure><figure><img src="assets/grammar_home.jpg" alt="영문법: 15주 코스 홈" loading="lazy"><figcaption>영문법: 15주 코스 홈</figcaption></figure></div><ul class="links"><li><a href="https://khlee5728-creator.github.io/language/" target="_blank" rel="noopener"><b>영어학 특강</b><span>형태론부터 음운론까지, 캐릭터 애니메이션과 AI 프로젝트를 결합한 15주 강의</span></a></li><li><a href="https://khlee5728-creator.github.io/phonology/" target="_blank" rel="noopener"><b>음운론</b><span>조음 원리 시각 자료와 발음 기호 게임</span></a></li><li><a href="https://khlee5728-creator.github.io/grammar/" target="_blank" rel="noopener"><b>영문법</b><span>스토리 장면과 게임으로 익히는 문법 (Grammar in Use)</span></a></li><li><a href="https://khlee5728-creator.github.io/College-English-3/" target="_blank" rel="noopener"><b>대학영어</b><span>주제별 읽기 자료와 학생 AI 프로젝트 포트폴리오</span></a></li><li><a href="https://khlee5728-creator.github.io/current-affairs/" target="_blank" rel="noopener"><b>시사영어</b><span>문장 성분 색 구분 표현 학습과 연습 문제</span></a></li><li><a href="https://education-black.vercel.app/" target="_blank" rel="noopener"><b>교육학 원서 강독 (교육대학원)</b><span>AI를 접목한 원서 강독 온라인 강의 자료</span></a></li></ul></div></section><section id="career"><div class="wrap">
+<span class="sec-no">04</span><h2>스토리 기반 영어 콘텐츠 기획·개발 경력</h2>
+<p class="sec-lead">출판사에서는 캐릭터와 이야기가 있는 그림책·애니메이션 시리즈를, 에듀테크 기업에서는 AI로 이야기를 만드는 학습 게임을 기획했습니다.</p>
+<div class="company-head"><h3>폴리 인스퍼레이션</h3><span class="when">2018–2026 · 차장 · 영어 AI 디지털 콘텐츠 기획·개발</span></div>
+<p class="sub">AI Playground: 캐릭터와 이야기로 배우는 AI 영어 게임</p><div class="thumbs "><figure><a href="assets/poly/poly_intro_read.jpg" target="_blank"><img src="assets/poly/poly_intro_read.jpg" alt="내 소개 글 읽기" loading="lazy"></a><figcaption><b>내 소개 글 읽기</b> · 학습자가 자기소개 글을 소리 내어 읽으면 AI가 읽기를 듣고 캐릭터 이미지를 만듭니다.</figcaption></figure><figure><a href="assets/poly/poly_this_is_me.jpg" target="_blank"><img src="assets/poly/poly_this_is_me.jpg" alt="THIS IS ME" loading="lazy"></a><figcaption><b>THIS IS ME</b> · 학습자의 글과 AI가 그린 캐릭터가 한 장의 이야기 카드로 완성됩니다.</figcaption></figure><figure><a href="assets/poly/poly_luna.jpg" target="_blank"><img src="assets/poly/poly_luna.jpg" alt="캐릭터 세계관: Luna" loading="lazy"></a><figcaption><b>캐릭터 세계관: Luna</b> · 마법사 캐릭터와 공간을 설계해 학습자가 탐색하며 이야기를 듣도록 했습니다.</figcaption></figure><figure><a href="assets/poly/poly_noir.jpg" target="_blank"><img src="assets/poly/poly_noir.jpg" alt="캐릭터 세계관: Noir" loading="lazy"></a><figcaption><b>캐릭터 세계관: Noir</b> · 같은 게임 안에서 성격이 다른 두 번째 캐릭터를 만들어 이야기의 폭을 넓혔습니다.</figcaption></figure><figure><a href="assets/poly/poly_tarot_cards.jpg" target="_blank"><img src="assets/poly/poly_tarot_cards.jpg" alt="타로 카드 스토리" loading="lazy"></a><figcaption><b>타로 카드 스토리</b> · 카드를 고르면 과거·현재·미래 장면이 펼쳐지는 이야기 구조입니다.</figcaption></figure><figure><a href="assets/poly/poly_tarot_story.jpg" target="_blank"><img src="assets/poly/poly_tarot_story.jpg" alt="과거·현재·미래로 배우는 시제" loading="lazy"></a><figcaption><b>과거·현재·미래로 배우는 시제</b> · 세 장면의 이야기 속에서 시제를 자연스럽게 익히도록 했습니다.</figcaption></figure><figure><a href="assets/poly/poly_news_write.jpg" target="_blank"><img src="assets/poly/poly_news_write.jpg" alt="AI 이미지 기사 쓰기" loading="lazy"></a><figcaption><b>AI 이미지 기사 쓰기</b> · 학습자가 기사를 쓰면 AI가 내용에 맞는 삽화를 생성합니다.</figcaption></figure><figure><a href="assets/poly/poly_news_done.jpg" target="_blank"><img src="assets/poly/poly_news_done.jpg" alt="완성된 신문 기사" loading="lazy"></a><figcaption><b>완성된 신문 기사</b> · 글과 이미지가 결합된 한 편의 신문 기사로 결과물이 완성됩니다.</figcaption></figure><figure><a href="assets/poly/poly_hero.jpg" target="_blank"><img src="assets/poly/poly_hero.jpg" alt="FIND YOUR HERO" loading="lazy"></a><figcaption><b>FIND YOUR HERO</b> · AI로 제작한 만화풍 캐릭터 일러스트를 활용한 게임 도입 화면입니다.</figcaption></figure></div>
+<p class="sub">AI 말하기·쓰기 플랫폼</p><div class="thumbs four"><figure><a href="assets/poly/poly_playground.jpg" target="_blank"><img src="assets/poly/poly_playground.jpg" alt="AI Playground" loading="lazy"></a><figcaption><b>AI Playground</b> · 초등 학습자를 위한 AI 영어 게임 플랫폼 기획·개발</figcaption></figure><figure><a href="assets/poly/poly_speaking.jpg" target="_blank"><img src="assets/poly/poly_speaking.jpg" alt="Speaking Hub" loading="lazy"></a><figcaption><b>Speaking Hub</b> · AI 캐릭터와 대화하는 말하기 플랫폼</figcaption></figure><figure><a href="assets/poly/poly_roleplay.jpg" target="_blank"><img src="assets/poly/poly_roleplay.jpg" alt="Role-play" loading="lazy"></a><figcaption><b>Role-play</b> · 미션이 있는 상황극 대화</figcaption></figure><figure><a href="assets/poly/poly_writing.jpg" target="_blank"><img src="assets/poly/poly_writing.jpg" alt="Writing Hub" loading="lazy"></a><figcaption><b>Writing Hub</b> · AI 피드백 기반 쓰기 플랫폼</figcaption></figure></div>
+<p class="copy">© Poly Inspiration. 재직 중 기획·개발한 콘텐츠로, 경력 소개 목적으로만 게시합니다.</p>
+<div class="company-head" style="margin-top:48px"><h3>튼튼영어(유니북스)</h3><span class="when">2010–2017 · 과장 · 스토리 기반 영어 그림책·애니메이션·디지털 콘텐츠 기획·개발</span></div>
+<div class="thumbs slides"><figure><a href="assets/tt/tt-06.jpg" target="_blank"><img src="assets/tt/tt-06.jpg" alt="Gyuri and Friends 애니메이션북 시리즈" loading="lazy"></a><figcaption><b>Gyuri and Friends 애니메이션북 시리즈</b></figcaption></figure><figure><a href="assets/tt/tt-07.jpg" target="_blank"><img src="assets/tt/tt-07.jpg" alt="Gyuri and Friends 구성품(스토리북·DVD·활동교구)" loading="lazy"></a><figcaption><b>Gyuri and Friends 구성품(스토리북·DVD·활동교구)</b></figcaption></figure><figure><a href="assets/tt/tt-08.jpg" target="_blank"><img src="assets/tt/tt-08.jpg" alt="Gyuri and Friends 학습용 애니메이션 제작" loading="lazy"></a><figcaption><b>Gyuri and Friends 학습용 애니메이션 제작</b></figcaption></figure><figure><a href="assets/tt/tt-10.jpg" target="_blank"><img src="assets/tt/tt-10.jpg" alt="Gyuri the Superhero 유치부 교재" loading="lazy"></a><figcaption><b>Gyuri the Superhero 유치부 교재</b></figcaption></figure><figure><a href="assets/tt/tt-11.jpg" target="_blank"><img src="assets/tt/tt-11.jpg" alt="Gyuri the Superhero 기획" loading="lazy"></a><figcaption><b>Gyuri the Superhero 기획</b></figcaption></figure><figure><a href="assets/tt/tt-09.jpg" target="_blank"><img src="assets/tt/tt-09.jpg" alt="Music Fun 뮤직 스토리북" loading="lazy"></a><figcaption><b>Music Fun 뮤직 스토리북</b></figcaption></figure><figure><a href="assets/tt/tt-13.jpg" target="_blank"><img src="assets/tt/tt-13.jpg" alt="Word Play 어휘 그림책(직업 주제)" loading="lazy"></a><figcaption><b>Word Play 어휘 그림책(직업 주제)</b></figcaption></figure><figure><a href="assets/tt/tt-02.jpg" target="_blank"><img src="assets/tt/tt-02.jpg" alt="What&#x27;s Up 코믹북 시리즈" loading="lazy"></a><figcaption><b>What&#x27;s Up 코믹북 시리즈</b></figcaption></figure><figure><a href="assets/tt/tt-03.jpg" target="_blank"><img src="assets/tt/tt-03.jpg" alt="What&#x27;s Up 코믹북 본문" loading="lazy"></a><figcaption><b>What&#x27;s Up 코믹북 본문</b></figcaption></figure><figure><a href="assets/tt/tt-15.jpg" target="_blank"><img src="assets/tt/tt-15.jpg" alt="콩콩콩 킹콩" loading="lazy"></a><figcaption><b>콩콩콩 킹콩</b></figcaption></figure></div>
+<p class="copy">© 각 발행사. 재직 중 기획·개발한 작품으로, 경력 소개 목적으로만 게시합니다. 이미지는 2019년에 정리한 개인 포트폴리오에서 가져왔습니다.</p>
+</div></section><section id="research"><div class="wrap">
+<span class="sec-no">05</span><h2>연구</h2>
+<div class="research"><img src="assets/psllt_poster.jpg" alt="PSLLT 2025 학회 포스터" loading="lazy">
+<div><p class="sec-lead" style="margin-bottom:16px">한국인 영어 학습자의 발음 지각과 산출을 연구해 왔습니다. 영어 발음·강세·억양에 대한 전문성은 디지털 스토리의 영어 내레이션을 지도하는 데 바로 이어집니다.</p>
+<ol><li>Perception and Production of Syllable-Initial English Obstruents by L1-Korean EFL Learners. PSLLT Conference, 2025.10.</li>
+<li>영어 학습 환경이 영어 및 한국어 모음 발화에 미치는 영향. 『언어와언어학』 101, 2023.</li>
+<li>한국인 영어학습자의 영어 모음 발화 분석. 『영어학연구』, 2021.</li>
+<li>한국 아동들의 영어 자음군 습득에 관한 연구. 『언어』, 2017.</li>
+<li>The Production of English Voiceless Sibilants /s/ and /ʃ/ by Young Korean Children. 『언어』, 2012.</li></ol></div></div></div></section><footer><div class="wrap">이경희 · <a href="mailto:khlee5728@gmail.com">khlee5728@gmail.com</a></div></footer></body></html>
